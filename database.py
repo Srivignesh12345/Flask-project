@@ -1,5 +1,4 @@
 from flask_mongoengine import MongoEngine
-
 mydata=MongoEngine()
 url="mongodb+srv://Srivignesh:sri12345*@cluster0.2pgxwru.mongodb.net/Srivignesh?retryWrites=true&w=majority"
 class laptop(mydata.Document):

@@ -25,16 +25,11 @@ def performEdit(mod):
         price=int(request.form['price'])
         stock=int(request.form['stock'])
         type=request.form['type']
-
         laptop.objects(model=model).update_one(set__serial=serial,
-                                               set__ram=ram,
-                                               set__ssd=ssd,
-                                               set__price=price,
-                                               set__stock=stock,
+                                               set__ram=ram,set__ssd=ssd,
+                                               set__price=price,set__stock=stock,
                                                set__type=type)
         return redirect("/list")
-
-
 
 @app.route("/pick/<mod>")
 def showRead(mod):
